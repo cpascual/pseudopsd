@@ -124,5 +124,5 @@ def pseudopsd_tau5():
     print "\n\n********* results written in '%s' ********\n\n" % ofname
 
 if __name__ == '__main__':
-    # pseudopsd_tau4()
+    pseudopsd_tau4()
     pseudopsd_tau5()
