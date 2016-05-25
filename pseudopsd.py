@@ -62,9 +62,11 @@ def pseudopsd_tau4():
     pseudopsd = ity4 * chi2.min()/chi2
     pore_diameter = numpy.array([2 * TE_radius(tau/1000.) for tau in tau4])
 
-    numpy.savetxt(ofname, numpy.stack((tau4, chi2, pore_diameter, pseudopsd)).T,
-              header="tau4\tchi2\tpore_diameter(nm)\tpseudopsd",
-              delimiter='\t', fmt='%8g')
+    numpy.savetxt(ofname,
+                  numpy.column_stack((tau4, chi2, pore_diameter, pseudopsd)),
+                  header="tau4\tchi2\tpore_diameter(nm)\tpseudopsd",
+                  delimiter='\t', fmt='%8g'
+                  )
 
 
     print "\n\n********* results written in '%s' ********\n\n" % ofname
@@ -116,9 +118,11 @@ def pseudopsd_tau5():
     pseudopsd = ity4 * chi2.min()/chi2
     pore_diameter = numpy.array([2 * TE_radius(tau/1000.) for tau in tau5])
 
-    numpy.savetxt(ofname, numpy.stack((tau5, chi2, pore_diameter, pseudopsd)).T,
-              header="tau5\tchi2\tpore_diameter(nm)\tpseudopsd",
-              delimiter='\t', fmt='%8g')
+    numpy.savetxt(ofname,
+                  numpy.column_stack((tau5, chi2, pore_diameter, pseudopsd)),
+                  header="tau5\tchi2\tpore_diameter(nm)\tpseudopsd",
+                  delimiter='\t', fmt='%8g'
+                  )
 
 
     print "\n\n********* results written in '%s' ********\n\n" % ofname
